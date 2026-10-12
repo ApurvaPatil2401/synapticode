@@ -58,7 +58,7 @@ def execute_code(code, retry=False):
     output = stdout.getvalue()
     if fig and fig.axes:
         st.pyplot(fig)
-    return output if output else "✅ Code executed with a plot."
+    return output if output else " Code executed with a plot."
 
 # Very basic auto-fix (e.g. for autopct bug in pie chart)
 def auto_fix_code(code, error_msg):
