@@ -2,7 +2,7 @@
 
 from focus_simulator import wait_for_focus
 from llm_agent import generate_code
-from executor import run_code  # ✅ Use the enhanced executor
+from executor import run_code 
 from prompt_templates import thought_prompts
 import random
 from stream_cleaner import extract_code_from_markdown
@@ -39,7 +39,7 @@ def main():
     if code.startswith("```"):
         code = "\n".join(line for line in code.splitlines() if not line.strip().startswith("```"))
 
-    # 🧪 Validate, auto-correct, and run safely
+    #  Validate, auto-correct, and run safely
     run_code(clean_code)
 
 
